@@ -8,7 +8,7 @@
             $attributes
                 ->merge($getExtraAttributes(), escape: false)
                 ->class([
-                    'absolute flex items-center justify-center w-6 h-6 bg-gray-200 rounded-full -start-3 ring-4 ring-white dark:bg-gray-700 dark:ring-gray-900',
+                    'absolute top-4 flex h-6 w-6 items-center justify-center rounded-full -start-3 bg-gray-200 ring-4 ring-white dark:bg-gray-700 dark:ring-gray-900',
                 ])
         }}
     >
@@ -35,7 +35,7 @@
                             },
                             match ($color) {
                                 'gray' => 'fi-color-gray text-gray-400 dark:text-gray-500',
-                                default => 'fi-color-custom text-custom-500 dark:text-custom-400',
+                                default => 'fi-color-primary text-primary-500 dark:text-primary-400',
                             },
                         ])
                         @style([

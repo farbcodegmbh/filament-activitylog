@@ -3,7 +3,7 @@
     "type": "module",
     "scripts": {
         "dev:styles": "npx tailwindcss -i resources/css/plugin.css -o resources/dist/activitylog.css --postcss --watch",
-        "build:styles": "npx tailwindcss -i resources/css/plugin.css -o resources/dist/activitylog.css --postcss --minify && npm run purge",
+        "build:styles": "npx tailwindcss -i resources/css/plugin.css -o resources/dist/activitylog.css --postcss --minify",
         "purge": "filament-purge -i resources/dist/activitylog.css -o resources/dist/activitylog.css -v 3.x",
         "dev": "npm-run-all --parallel dev:*",
         "build": "npm-run-all build:*"
