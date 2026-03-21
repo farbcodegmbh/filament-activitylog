@@ -1,12 +1,13 @@
 <?php
 
 return [
-    'fields' => [
+    'changes' => 'Änderungen',
+    'fields'  => [
         'log_name' => [
             'label' => 'Typ',
         ],
         'event' => [
-            'label' => 'Ereigniss',
+            'label' => 'Ereignis',
         ],
         'subject_type' => [
             'label' => 'Betreff',
@@ -18,10 +19,10 @@ return [
             'label' => 'Beschreibung',
         ],
         'properties' => [
-            'label' => 'Attribute',
+            'label' => 'Eigenschaften',
         ],
         'created_at' => [
-            'label' => 'Logzeitpunkt',
+            'label' => 'Protokolliert am',
         ],
         'old' => [
             'label' => 'Alt',
