@@ -7,6 +7,7 @@ use Filament\Contracts\Plugin;
 use Filament\Panel;
 use Filament\Support\Concerns\EvaluatesClosures;
 use Illuminate\Support\Carbon;
+use Rmsramos\Activitylog\Resources\ActivitylogResource\ActivitylogResource;
 
 class ActivitylogPlugin implements Plugin
 {
@@ -82,7 +83,13 @@ class ActivitylogPlugin implements Plugin
 
     public function getResource(): string
     {
-        return $this->resource ?? config('filament-activitylog.resources.resource');
+        $resource = $this->resource ?? config('filament-activitylog.resources.resource');
+
+        if (! is_string($resource) || blank($resource)) {
+            return ActivitylogResource::class;
+        }
+
+        return $resource;
     }
 
     public function getLabel(): string
@@ -112,7 +119,9 @@ class ActivitylogPlugin implements Plugin
 
     public function getPluralLabel(): string
     {
-        return $this->evaluate($this->pluralLabel) ?? config('filament-activitylog.resources.plural_label');
+        $pluralLabel = $this->evaluate($this->pluralLabel) ?? config('filament-activitylog.resources.plural_label');
+
+        return (is_string($pluralLabel) && filled($pluralLabel)) ? $pluralLabel : 'Activity Logs';
     }
 
     public function getNavigationItem(): bool
