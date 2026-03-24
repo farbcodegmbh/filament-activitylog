@@ -17,11 +17,11 @@
             }}
     >
         @if (count($childComponentContainers = $getChildComponentContainers()))
-            <ol class="relative ms-3 before:absolute before:start-0 before:top-8 before:bottom-0 before:w-px before:bg-gray-200 dark:before:bg-gray-700">
+            <ol class="m-0 list-none p-0">
                 @foreach ($childComponentContainers as $container)
                     <li
                             @class([
-                                'relative mb-4 ms-6',
+                                'relative block pb-6 ps-12 last:pb-0 before:absolute before:bottom-0 before:start-4 before:top-8 before:w-px before:bg-gray-200 dark:before:bg-gray-700',
                                 'fi-in-repeatable-item block',
                                 'rounded-xl bg-white p-4 shadow-sm ring-1 ring-gray-950/5 dark:bg-white/5 dark:ring-white/10' => $isContained,
                             ])

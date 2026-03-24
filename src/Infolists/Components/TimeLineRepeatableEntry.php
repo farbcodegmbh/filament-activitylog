@@ -6,9 +6,9 @@ use Filament\Infolists\Components\RepeatableEntry;
 
 class TimeLineRepeatableEntry extends RepeatableEntry
 {
-    protected function setup(): void
+    protected function setUp(): void
     {
-        parent::setup();
+        parent::setUp();
 
         $this->configureRepeatableEntry();
     }
@@ -16,7 +16,6 @@ class TimeLineRepeatableEntry extends RepeatableEntry
     protected function configureRepeatableEntry(): void
     {
         $this
-            ->extraAttributes(['style' => 'margin-left:1.25rem;'])
             ->contained(false)
             ->hiddenLabel();
     }

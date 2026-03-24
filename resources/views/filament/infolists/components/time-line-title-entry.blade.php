@@ -3,7 +3,7 @@
         {{
             $attributes
                 ->merge($getExtraAttributes(), escape: false)
-                ->class(['fi-in-text w-full absolute top-4'])
+                ->class(['fi-in-text w-full'])
         }}
     >
 

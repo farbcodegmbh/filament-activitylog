@@ -8,7 +8,7 @@
             $attributes
                 ->merge($getExtraAttributes(), escape: false)
                 ->class([
-                    'absolute top-4 flex h-6 w-6 items-center justify-center rounded-full -start-3 bg-gray-200 ring-4 ring-white dark:bg-gray-700 dark:ring-gray-900',
+                    'absolute start-0 top-0.5 inline-flex size-8 items-center justify-center rounded-full bg-gray-200 ring-4 ring-white dark:bg-gray-700 dark:ring-gray-900',
                 ])
         }}
     >
