@@ -32,12 +32,13 @@ class ActivitylogServiceProvider extends PackageServiceProvider
             });
     }
 
-    public function packageBooted(): void
+    // Don't register conflicting CSS because everything should handled by tailwind in the consuming app
+    /* public function packageBooted(): void
     {
         $assets = [
             Css::make('activitylog-styles', __DIR__ . '/../resources/dist/activitylog.css'),
         ];
 
         FilamentAsset::register($assets, 'rmsramos/activitylog');
-    }
+    } */
 }
