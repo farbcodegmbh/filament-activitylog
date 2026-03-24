@@ -21,7 +21,7 @@
                 @foreach ($childComponentContainers as $container)
                     <li
                             @class([
-                                'relative block pb-6 ps-12 last:pb-0 before:absolute before:bottom-0 before:start-4 before:top-8 before:w-px before:bg-gray-200 dark:before:bg-gray-700',
+                                'relative block pb-6 ps-12 last:pb-0 before:absolute before:bottom-0 before:start-4 before:top-8 before:w-px before:bg-gray-200 dark:before:bg-gray-700 [&>.fi-in-repeatable-items>.fi-sc>.fi-grid-col:first-child]:absolute [&>.fi-in-repeatable-items>.fi-sc>.fi-grid-col:first-child]:start-0 [&>.fi-in-repeatable-items>.fi-sc>.fi-grid-col:first-child]:top-0 [&>.fi-in-repeatable-items>.fi-sc>.fi-grid-col:first-child]:w-0 [&>.fi-in-repeatable-items>.fi-sc>.fi-grid-col:first-child]:h-0',
                                 'fi-in-repeatable-item block',
                                 'rounded-xl bg-white p-4 shadow-sm ring-1 ring-gray-950/5 dark:bg-white/5 dark:ring-white/10' => $isContained,
                             ])
